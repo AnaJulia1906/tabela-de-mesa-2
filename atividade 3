@@ -1,0 +1,15 @@
+using System;
+using System;
+namespace CalculoRendimento{
+    class Program    {
+        static void Main(string[] args)        {
+            // Entrada de dados            Console.Write("Digite o valor presente: R$ ");
+            double valorPresente = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Digite a taxa de juros (%): ");            double taxaJuros = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Digite o período (anos): ");
+            int periodo = Convert.ToInt32(Console.ReadLine());
+            // Cálculo do rendimento            double taxaDecimal = taxaJuros / 100; // Convertendo a taxa percentual para decimal
+            double rendimentoTotal = valorPresente * Math.Pow(1 + taxaDecimal, periodo);
+            // Saída do resultado
+            Console.WriteLine($"Rendimento total: R$ {rendimentoTotal:F2}");        }
+    }}
