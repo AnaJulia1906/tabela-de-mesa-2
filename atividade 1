@@ -1,0 +1,19 @@
+using System;
+namespace CalculadoraRendimento
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Valores iniciais
+            double valorInicial = 1000;
+            double taxa = 5.3 / 100;
+            int meses = 6 * 2; // 6 meses por ano, por 2 anos 
+
+            // Cálculo do valor final 
+            double valorFinal = valorInicial * Math.Pow(1 + taxa, meses);
+            // Exibindo o resultado
+            Console.WriteLine($"Valor final:{valorFinal:C}");
+        }
+    }
+}
