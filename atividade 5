@@ -1,0 +1,21 @@
+using System;
+namespace CalculadoraInvestimentos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Dados do investimento
+            double valorInicial = 7107.36;
+            double taxaJurosAnual = 1.25; int tempoAnos = 2;
+            // Cálculo do valor final
+            double valorFinal = valorInicial * Math.Pow(1 + (taxaJurosAnual / 100), tempoAnos);
+            // Exibir resultado
+            Console.WriteLine($"Valor inicial: R${valorInicial:F2}");
+            Console.WriteLine($"Taxa de juros anual: {taxaJurosAnual}%");
+            Console.WriteLine($"Tempo: {tempoAnos} anos");
+            Console.WriteLine($"Valor final: R${valorFinal:F2}");
+            Console.ReadLine();
+        }
+    }
+}
